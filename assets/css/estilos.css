@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/*Reset de CSS*/
+* {
+    box-sizing:border-box ;
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    height: 100%;
+}
+
+body {
+    font-family:"Roboto", sans-serif;
+    font-size: 1.2em;
+    min-height: 100%;
+}
+
+.contenedor > * {
+    box-shadow: -1px 1px 0px rgb(0, 0, 0);
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.header {
+    grid-area: header;
+    background-color: antiquewhite;
+
+}
+.nav {
+    grid-area: nav;
+    background-color: rgb(227, 227, 149);
+
+}
+.aside {
+    grid-area: aside;
+    background-color: rgb(179, 162, 226);
+
+}
+.article {
+    grid-area: article;
+    background-color: rgb(240, 152, 152);
+
+}
+.footer {
+    grid-area: footer;
+    background-color: rgb(184, 234, 144);
+
+}
+
+.contenedor {
+    display: grid;
+    gap: 10px;
+    grid-template:
+        "header"100px
+        "nav"100px
+        "aside"100px
+        "footer"100px 
+        "article" auto;
+}
+
+@media (min-width:600px){
+    .contenedor{
+        grid-template:
+        "header  header" 100px
+        "nav  nav" 100px
+        "aside article"   auto
+        "footer  footer" 100px;
+    }
